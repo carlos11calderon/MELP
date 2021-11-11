@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "55767f41-a23c-40f4-b1ad-59254f5ccec8",
+		"name": "MELP_TEST_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API",
+			"item": [
+				{
+					"name": "EndPoint_Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n\"id\":\"llave000000Prueba1\",\r\n\"rating\": \"2\",\r\n\"name\":\"pizza pekas\",\r\n\"site\": \"http://pekaspizza.mx\",\r\n\"email\": \"pekas.pizza25@pizzeria.com\",\r\n\"phone\":\"504 258 067\",\r\n\"street\": \"8758 JRB\",\r\n\"city\": \"Vormir\",\r\n\"state\":\"wakanda\",\r\n\"lat\": \"19.4346\",\r\n\"lng\":\"-99.1324\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localHost:5000/CreateRegister",
+							"host": [
+								"localHost"
+							],
+							"port": "5000",
+							"path": [
+								"CreateRegister"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EndPoint_READ",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localHost:5000/ViewData",
+							"host": [
+								"localHost"
+							],
+							"port": "5000",
+							"path": [
+								"ViewData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EndPoint_UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"pizza dominos\",\r\n    \"email\":\"dominos.pizza25@pizzeria.com\",\r\n    \"phone\":\"502 4258 8067\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localHost:5000/UpdateRegister/llave000000Prueba1",
+							"host": [
+								"localHost"
+							],
+							"port": "5000",
+							"path": [
+								"UpdateRegister",
+								"llave000000Prueba1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EndPoint_DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"llave000000Prueba1\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localHost:5000/Delete",
+							"host": [
+								"localHost"
+							],
+							"port": "5000",
+							"path": [
+								"Delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EndPoint_Task2_statistics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localHost:5000/Alredy/statistics?latitude=19.4332&longitude=-99.1317&radius=5000",
+							"host": [
+								"localHost"
+							],
+							"port": "5000",
+							"path": [
+								"Alredy",
+								"statistics"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "19.4332"
+								},
+								{
+									"key": "longitude",
+									"value": "-99.1317"
+								},
+								{
+									"key": "radius",
+									"value": "5000"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
